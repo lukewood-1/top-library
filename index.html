@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name='viewport' description='width=device-width, initial-scale=1.0'>
+	<title>TOP - Library</title>
+	<link rel="stylesheet" href="style.css" media="all">
+	<script src='main.js' defer></script>
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<ul>
+				<li class="logo">Y<span class="logo-adjust">ou</span>B<span class="logo-adjust">oo</span>k</li>
+			</ul>
+		</div>
+		<div class="main">
+			<div class="hero-banner">
+				<h1>Your Personal Library</h1>
+				<h2>Your world. Your passion.</h2>
+				<button type='button' class='open-modal'>Add book</button>
+			</div>
+
+			<!-- Add book modal  -->
+			<dialog class='modal'>
+				<form action="#" method="POST" novalidate>
+					<ul>
+						<h2>Add Your Book!</h2>
+						<li class="form-control">
+							<label for="title">Title: </label>
+							<input type='text' id="title" name="title" autofocus required>
+							<p class="feedback"></p>
+						</li>
+						<li class="form-control">
+							<label for="author">Author: </label>
+							<input id="author" type="text" name="author" pattern='^[0-9a-zA-Z\.\,¨&\-\s]+$' required>
+							<p class="feedback"></p>
+						</li>
+						<li class="form-control">
+							<label for="pages">Pages: </label>
+							<input id="pages" type="text" name="pages" pattern='^[0-9]+$' required>
+							<p class="feedback"></p>
+						</li>
+						<li class="form-control">
+							<fieldset class="radio-wrapper">
+								<legend>Have you read this book yet?</legend>
+								<span class="before-hasRead">No</span>
+								<input class="hasRead" type="checkbox" name="hasRead" value="true">
+								<span class="after-hasRead">Yes</span>
+							</fieldset>
+						</li>
+						<li class="form-control">
+							<button class="close-modal" type="submit">Add book</button>
+							<p class="feedback"></p>
+						</li>
+					</ul>
+				</form>
+			</dialog>
+
+<!-- Bookshelf for added books -->
+			<div class="bookshelf">
+				<h2>Bookshelf</h2>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
